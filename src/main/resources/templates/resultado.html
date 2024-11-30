@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado de Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTAN3/azprGlAnm30DgpJLImSNaoOYzztl93vH2Cw4uU9ZT1SjeQ0z53l6V3Bjs" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">¡Producto Registrado Exitosamente!</h2>
+
+        <ul class="list-group">
+            <li class="list-group-item"><strong>Nombre del Producto:</strong> <span th:text="${producto.nombreProducto}"></span></li>
+            <li class="list-group-item"><strong>Fecha de Caducidad:</strong> <span th:text="${producto.fec_caducidad}"></span></li>
+            <li class="list-group-item"><strong>Stock Mínimo:</strong> <span th:text="${producto.stockMin}"></span></li>
+            <li class="list-group-item"><strong>Stock Máximo:</strong> <span th:text="${producto.stockMax}"></span></li>
+            <li class="list-group-item"><strong>Precio Unitario:</strong> <span th:text="${producto.precio_unit}"></span></li>
+            <li class="list-group-item"><strong>Categoría:</strong> <span th:text="${producto.categoria}"></span></li>
+            <li class="list-group-item"><strong>Marca:</strong> <span th:text="${producto.marca}"></span></li>
+        </ul>
+
+        <a href="/registroProducto" class="btn btn-primary mt-3">Registrar Otro Producto</a>
+    </div>
+</body>
+</html>
